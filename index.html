@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Maker Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <header class="header">
+      <img src="https://via.placeholder.com/150x50?text=Resume+Maker+Pro" alt="Resume Maker Pro Logo" class="logo">
+      <h1>Create Your Professional Resume</h1>
+    </header>
+
+    <!-- Form -->
+    <form id="resumeForm" action="/generate" method="POST">
+
+      <!-- Personal Information -->
+      <section class="form-section">
+        <h2>Personal Information</h2>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required 
+                 title="Enter your full name as it appears on official documents">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required 
+                 title="Enter a valid email address">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required 
+                 title="Enter a valid phone number">
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="form-section">
+        <h2>Education</h2>
+        <div class="form-group">
+          <label for="degree">Degree</label>
+          <input type="text" id="degree" name="degree" placeholder="e.g., Bachelor of Technology" required 
+                 title="Enter your highest degree or certification">
+        </div>
+        <div class="form-group">
+          <label for="institution">Institution</label>
+          <input type="text" id="institution" name="institution" placeholder="Enter the name of the institution" required 
+                 title="Enter the name of the school or college">
+        </div>
+        <div class="form-group">
+          <label for="year">Year</label>
+          <input type="number" id="year" name="year" placeholder="e.g., 2024" required 
+                 title="Enter the year you graduated or expect to graduate">
+        </div>
+      </section>
+
+      <!-- Work Experience -->
+      <section class="form-section">
+        <h2>Work Experience</h2>
+        <div class="form-group">
+          <label for="jobTitle">Job Title</label>
+          <input type="text" id="jobTitle" name="jobTitle" placeholder="e.g., Software Engineer" required 
+                 title="Enter your job title">
+        </div>
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" placeholder="Enter the company name" required 
+                 title="Enter the name of the company where you worked">
+        </div>
+        <div class="form-group">
+          <label for="duration">Duration</label>
+          <input type="text" id="duration" name="duration" placeholder="e.g., Jan 2020 - Dec 2022" required 
+                 title="Enter the duration of your work experience">
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" name="description" rows="4" placeholder="Describe your responsibilities and achievements" required 
+                    title="Enter a brief description of your role and contributions"></textarea>
+        </div>
+      </section>
+
+      <!-- Skills and Achievements -->
+      <section class="form-section">
+        <h2>Skills and Achievements</h2>
+        <div class="form-group">
+          <label for="skills">Skills</label>
+          <input type="text" id="skills" name="skills" placeholder="e.g., Java, Python, Project Management" required 
+                 title="Enter your key skills separated by commas">
+        </div>
+        <div class="form-group">
+          <label for="achievements">Achievements</label>
+          <textarea id="achievements" name="achievements" rows="4" placeholder="e.g., Best Employee Award, 2022" required 
+                    title="Enter your achievements"></textarea>
+        </div>
+      </section>
+
+      <!-- Submit Button -->
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Generate Resume</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Export Options -->
+  <div class="export-options">
+    <!-- Button to trigger email sending -->
+    <button id="send-email" style="display:none;">Send Resume via Email</button>
+
+    <!-- Form for Email -->
+    <form id="emailForm">
+      <input
+        type="email"
+        id="emailAddress"
+        name="emailAddress"
+        placeholder="Enter recipient's email"
+        required
+      />
+      <button type="submit" class="btn-secondary">Send Email</button>
+    </form>
+  </div>
+
+  <!-- Feedback Section (optional) -->
+  <div id="feedback" class="feedback"></div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

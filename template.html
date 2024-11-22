@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Resume</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="resumeStyle.css">
+</head>
+
+<body>
+  <div class="resume one-column">
+    <header>
+      <h1><%= name %></h1>
+      <p><%= email %> | <%= phone %></p>
+    </header>
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <strong><%= degree %></strong> - <%= institution %> (<%= year %>)
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Work Experience</h2>
+      <ul>
+        <li>
+          <strong><%= jobTitle %></strong> at <%= company %> <em>(<%= duration %>)</em>
+          <p><%= description %></p>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Skills</h2>
+      <p><%= skills %></p>
+    </section>
+    <section>
+      <h2>Achievements</h2>
+      <p><%= achievements %></p>
+    </section>
+  </div>
+</body>
+</html>
